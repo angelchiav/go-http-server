@@ -6,11 +6,11 @@ import (
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(w, "Si ves esto el servidor funciona.")
+	fmt.Fprintln(w, "server working properly.")
 }
 
 func main() {
 	http.HandleFunc("/", handler)
-	fmt.Println("Escuchando en localhost:8080/")
+	fmt.Println("🚀 Listening on localhost:8080/")
 	http.ListenAndServe(":8080", nil)
 }
